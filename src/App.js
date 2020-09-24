@@ -14,7 +14,7 @@ const App = () => {
       <Toggle result={result} setResult={setResult} />
       <div className="buttons">
         <Increment result={result} setResult={setResult} />
-        <Decrement result={result} setResult={setResult}/>
+        <Decrement result={result} setResult={setResult} />
       </div>
     </div>
   );
