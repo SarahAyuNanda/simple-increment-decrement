@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import Reset from './Reset';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../assets/Toggle.css'
 
 const Toggle = (props) => {
     const result = props.result
+    const setResult = props.setResult
     const [showToggle, setShowToggle] = useState(false)
 
     const toggleButton = () => {
@@ -12,14 +14,17 @@ const Toggle = (props) => {
     }
 
     return (
-        <div className="toggle">
+        <div className="Toggle">
             {showToggle ?
                 <span id="show">{result}</span>
                 :
                 <span id="hide">{result}</span>}
-            <button type="button" class="btn btn-dark" onClick={toggleButton}>
-                {showToggle ? "Hide" : "Show"}
-            </button>
+            <div className="buttons">
+                <button id="toggle" type="button" class="btn btn-dark" onClick={toggleButton}>
+                    {showToggle ? "Hide" : "Show"}
+                </button>
+                <Reset setResult={setResult} />
+            </div>
         </div>
     );
 };
