@@ -12,7 +12,7 @@ const Decrement = (props) => {
     }
     return (
         <div>
-            <button id="decrement" type="button" class="btn btn-danger" onClick={decrement}>Decrement</button>
+            <button id="decrement" type="button" class="btn btn-danger" onClick={decrement}>-</button>
         </div>
     );
 };
