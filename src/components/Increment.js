@@ -12,7 +12,7 @@ const Increment = (props) => {
     }
     return (
         <div>
-            <button id="increment" type="button" class="btn btn-primary" onClick={increment}>Increment</button>
+            <button id="increment" type="button" class="btn btn-primary" onClick={increment}>+</button>
         </div>
     );
 };
